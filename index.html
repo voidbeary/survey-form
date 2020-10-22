@@ -1,46 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Survey form</title>
-	<script></script>
-</head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <main class="main">
+      <form id="survey-form">
+        <h1 id="title">Survey form</h1>
+        <p id="description" class="subTitle">small form for your main info</p>
 
-<body>
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-	<main>
-		<h1 id="title">Survey form</h1>
-		<p id="description">small form for your main info</p>
-		<form id="survey-form">
-			<label id="name-label"><input id="name" placeholder="name" required><br>
-      <label id="email-label"><input id="email" type="email" placeholder="email" required><br>
-      <label id="number-label"><input id="number" type="number" min="1" max="5" placeholder="number" required><br>
-      <select id="dropdown" required>
-        <option disabled="" selected="" value="">Select your pet</option>
-        <option value="student">Cat</option>
-        <option value="student">Dog</option>
-         <option value="student">Ferret</option>
-         </select>
-         <p>Where does your pet lives?</p>
-            <input  value="with you" name="pet" type="radio" class="input-radio" checked="">With you<br>
-            <input  value="with family" name="pet" type="radio" class="input-radio" >With your family<br>
-            <input  value="else" name="pet" type="radio" class="input-radio" >Somewhere else
-            <br>
-            <p>Where did you studied?</p>
-            <input value="vgtu" type="checkbox" class="input-checkbox">VGTU<br>
-            <input value="vu" type="checkbox" class="input-checkbox">VU<br>
-            <input value="vda" type="checkbox" class="input-checkbox">VDA<br>
-            <input value="else" type="checkbox" class="input-checkbox">Else<br>
+        <label id="name-label"
+          >Name
+          <input
+            class="abstractInput textInput"
+            id="name"
+            placeholder="name"
+            required
+          />
+        </label>
 
-            <p>Any comments or suggestions?</p>
-            <textarea placeholder="Additional comments"></textarea><br>
-            <br><button id="submit">Submit</button>
+        <label id="email-label"
+          >Email
+          <input
+            class="abstractInput textInput"
+            id="email"
+            type="email"
+            placeholder="email"
+            required
+          />
+        </label>
 
-    </form>
-	</main>
+        <label id="number-label"
+          >Number from 1 to 5
+          <input
+            class="abstractInput textInput"
+            id="number"
+            type="number"
+            min="1"
+            max="5"
+            placeholder="number"
+            required
+          />
+        </label>
 
-</body>
+        <label for="dropdown" id="dropdown-label"
+          >What kind of pet do you have?</label
+        >
 
+        <select class="abstractInput" id="dropdown" required>
+          <option disabled="" selected="" value="">Select your pet</option>
+          <option value="student">Cat</option>
+          <option value="student">Dog</option>
+          <option value="student">Ferret</option>
+        </select>
+
+        <fieldset>
+          <legend>Where does your pet lives?</legend>
+          <div class="row">
+            <input
+              id="radio-you"
+              value="with you"
+              name="pet"
+              type="radio"
+              class="input-radio"
+              checked=""
+            />
+            <label for="radio-you">With you</label>
+          </div>
+          <div class="row">
+            <input
+              id="radio-family"
+              value="with family"
+              name="pet"
+              type="radio"
+              class="input-radio"
+            />
+            <label for="radio-family">With your family</label>
+          </div>
+          <div class="row">
+            <input
+              id="radio-else"
+              value="else"
+              name="pet"
+              type="radio"
+              class="input-radio"
+            />
+            <label for="radio-else">Somewhere else</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where did you study?</legend>
+          <div class="row">
+            <input
+              id="check-vgtu"
+              value="vgtu"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="check-vgtu">VGTU</label>
+          </div>
+          <div class="row">
+            <input
+              id="check-vu"
+              value="vu"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="check-vu">VU</label>
+          </div>
+          <div class="row">
+            <input
+              id="check-vda"
+              value="vda"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="check-vda">VDA</label>
+          </div>
+          <div class="row">
+            <input
+              id="check-else"
+              value="else"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            <label for="check-else">Else</label>
+          </div>
+        </fieldset>
+
+        <label for="comments-input">Any comments or suggestions?</label>
+        <textarea
+          id="comments-input"
+          class="abstractInput textInput"
+          placeholder="Additional comments"
+        ></textarea>
+
+        <button class="button" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
 </html>
